@@ -331,6 +331,7 @@ class Ntttcp(Tool):
             f"ulimit -n 204800 && {self.command} {cmd}",
             shell=True,
             sudo=True,
+            timeout=1000,
             expected_exit_code=0,
             expected_exit_code_failure_message=f"fail to run {self.command} {cmd}",
         )
