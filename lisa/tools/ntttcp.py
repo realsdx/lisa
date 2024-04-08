@@ -213,7 +213,7 @@ class Ntttcp(Tool):
         cmd += (
             f" -P {ports_count} -t {run_time_seconds} -W {warm_up_time_seconds} "
             f"-C {cool_down_time_seconds} -b {buffer_size}k "
-            f"--show-nic-packets {nic_name} "
+            f"--show-nic-packets {nic_name} -V "
         )
         if udp_mode:
             cmd += " -u "
@@ -319,7 +319,7 @@ class Ntttcp(Tool):
         cmd = (
             f" -s{server_ip} -P {ports_count} -n {threads_count} -t {run_time_seconds} "
             f"-W {warm_up_time_seconds} -C {cool_down_time_seconds} -b {buffer_size}k "
-            f"--show-nic-packets {nic_name} "
+            f"--show-nic-packets {nic_name} -V "
         )
         if udp_mode:
             cmd += " -u "
